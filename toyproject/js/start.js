@@ -11,6 +11,7 @@ const start = () => {
       main.style.display = 'none';
       qna.style.display = 'flex';
     }, 450);
+
     let questionIndex = 0;
     next(questionIndex);
   }, 450);
@@ -21,6 +22,8 @@ const next = (questionIndex) => {
   let questionBox = document.getElementById('question-box');
   questionBox.innerHTML = qnaList[questionIndex].q;
 
+  let statusNum = document.getElementById('status-number');
+  statusNum.innerHTML = questionIndex + 1 + '/12';
   for (let i in qnaList[questionIndex].a) {
     addAnswerButton(qnaList[questionIndex].a[i].answer, questionIndex);
   }
