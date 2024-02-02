@@ -2,7 +2,7 @@
   display: none;
   flex-direction: column;
   align-items: center;
-  justify-contents: center;
+  justify-content: space-between;
 }
 
 #question-box {
@@ -14,12 +14,10 @@
   height: 150px;
   font-size: 23px;
   font-weight: bold;
-  margin-top: 40px;
-  margin-bottom: 80px;
 }
 
 #answer-box {
-  width: 80%;
+  width: 100%;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -29,14 +27,14 @@
 }
 
 .answer-list {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: bold;
   color: #cae9ff;
   background-color: #ffffff;
   border: 3px solid #cae9ff;
   border-radius: 20px;
-  padding: 40px;
-  margin: 30px;
+  padding: 15px;
+  margin: 20px;
   cursor: pointer;
 }
 
@@ -50,12 +48,18 @@
   background-color: #ffffff;
 }
 
+#status-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 #status-bar-container {
   width: 80%;
   height: 20px;
   border: 3px solid #e3e3e3;
   border-radius: 20px;
-  margin-top: 30px;
 }
 
 #status-bar {
@@ -67,5 +71,5 @@
 #status-number {
   font-size: 18;
   font-weight: bold;
-  margin-top: 60px;
+  margin-top: 30px;
 }
