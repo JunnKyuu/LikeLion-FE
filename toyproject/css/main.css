@@ -20,7 +20,7 @@
 }
 
 #main-title-container {
-  width: 50%;
+  width: 60%;
   height: 100px;
   display: flex;
   flex-direction: column;
@@ -39,7 +39,7 @@
 }
 
 .main-title-text {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
   margin-top: 10px;
 }

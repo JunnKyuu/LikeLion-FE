@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="../css/qna.css">
   <link rel="stylesheet" href="../css/result.css">
   <link rel="stylesheet" href="../css/default.css">
+  <link rel="stylesheet" href="../css/animation.css">
   <title>toyproject</title>
 </head>
 
@@ -27,20 +28,22 @@
         </div>
       </div>
       <image id="main-image" src="../image/sample-main-image.png"></image>
-      <button id="start-button">테스트 하러가기</button>
+      <button id="start-button" onclick="start()">테스트 하러가기</button>
     </section>
-
 
     <!-- qna -->
     <section class="section" id="qna">
-      <h1>qna</h1>
+      <div id="question-box"></div>
+      <div id="answer-box"></div>
     </section>
-
 
     <!-- result -->
     <section class="section" id="result">
       <h1>result</h1>
     </section>
+    <!-- js -->
+    <script src="../js/data.js"></script>
+    <script src="../js/start.js"></script>
   </div>
 </body>
 
