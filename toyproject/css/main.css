@@ -58,16 +58,16 @@
   color: white;
   border: none;
   border-radius: 20px;
-  background-color: #cae9ff;
+  background-color: #ffd058;
   cursor: pointer;
 }
 
 #start-button:hover {
-  border: 3px solid #cae9ff;
+  border: 3px solid #ffd058;
   background: #ffffff;
-  color: #cae9ff;
+  color: #ffd058;
 }
 
 #start-button:active {
-  background-color: #cae9ff;
+  background-color: #ffd058;
 }
