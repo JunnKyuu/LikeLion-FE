@@ -7,6 +7,12 @@
 
 <br>
 
-### 2. one-bite-react
+### 2. frontend-session
+
+- 정기 프론트엔드 세션 전에 미리 해보는 실습
+
+<br>
+
+### 3. one-bite-react
 
 - 멋쟁이사자처럼 프론트엔드 운영진 React 스터디
