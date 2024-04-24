@@ -4,10 +4,10 @@ const loginBtn = document.getElementById('LOGIN_BTN');
 
 const color = () => {
   if (loginId.value.length > 0 && loginId.value.indexOf('@') !== -1 && loginPw.value.length >= 5) {
-    loginBtn.style.backgroundColor = '#0095F6';
+    loginBtn.style.backgroundColor = '#E67800';
     loginBtn.disabled = false;
   } else {
-    loginBtn.style.backgroundColor = '#C0DFFD';
+    loginBtn.style.backgroundColor = '#F5F5F5';
     loginBtn.disabled = true;
   }
 };
