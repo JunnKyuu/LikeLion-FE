@@ -19,6 +19,12 @@ const success = () => {
   loginSuccess.style.display = 'block';
 };
 
+const move = () => {
+  loginSection.style.display = 'block';
+  loginSuccess.style.display = 'none';
+};
+
 loginId.addEventListener('keyup', color);
 loginPw.addEventListener('keyup', color);
 loginBtn.addEventListener('click', success);
+success_btn.addEventListener('click', move);
