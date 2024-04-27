@@ -20,7 +20,7 @@ const success = () => {
 };
 
 const move = () => {
-  loginSection.style.display = 'block';
+  loginSection.style.display = 'flex';
   loginSuccess.style.display = 'none';
 };
 
