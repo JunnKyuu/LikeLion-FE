@@ -14,13 +14,13 @@ const mockData = [
   {
     id: 1,
     isDone: false,
-    content: '빨래하기',
+    content: '풋살하기',
     date: new Date().getTime(),
   },
   {
     id: 2,
     isDone: false,
-    content: '노래 연습하기',
+    content: '멋사 활동',
     date: new Date().getTime(),
   },
 ];
