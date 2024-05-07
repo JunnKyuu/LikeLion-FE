@@ -1,4 +1,5 @@
-const loginId = document.getElementById('LOGIN_ID');
+// const loginId = document.getElementById('LOGIN_ID');
+const loginId = document.querySelector(#'LOGIN_ID');
 const loginPw = document.getElementById('LOGIN_PW');
 const loginBtn = document.getElementById('LOGIN_BTN');
 const loginSection = document.getElementById('LOGIN_SECTION');
