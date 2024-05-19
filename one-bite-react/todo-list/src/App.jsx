@@ -26,7 +26,7 @@ const mockData = [
 ];
 
 const App = () => {
-  const [todos, setTodos] = useState([mockData]);
+  const [todos, setTodos] = useState(mockData);
   const idRef = useRef(3);
 
   const onCreate = (content) => {
