@@ -1,17 +1,6 @@
-import Header from './components/Header';
-import ShortCutContainer from './components/ShortCutContainer';
-import HomeBanner from './components/HomeBanner';
+import React from 'react';
+import { useState, useEffect } from 'react';
 
-const App = () => {
-  return (
-    <>
-      <Header />
-      <section className="mx-40">
-        <ShortCutContainer />
-        <HomeBanner />
-      </section>
-    </>
-  );
+export const App = () => {
+  return <div>App</div>;
 };
-
-export default App;
