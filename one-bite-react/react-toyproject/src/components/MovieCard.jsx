@@ -1,30 +1,13 @@
-import { Grid } from '@mui/material';
+import React from 'react';
 
-export const MovieCard = ({ title, backdrop_path, vote_average }) => {
-  const path = 'https://image.tmdb.org/t/p/w1280';
+export const MovieCard = ({ title, poster_path, vote_average }) => {
+  const basicPath = 'https://image.tmdb.org/t/p/w1280';
+
   return (
-    <Grid
-      container
-      sx={{
-        margin: 3,
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center',
-        border: 'solid 1px #dddddd',
-        borderRadius: '10px',
-        padding: '20px',
-      }}
-    >
-      <Grid item>
-        <img className="rounded-md" src={path + backdrop_path} />
-      </Grid>
-      <Grid item>
-        <h3>{title}</h3>
-      </Grid>
-      <Grid item>
-        <p>평점: {vote_average}</p>
-      </Grid>
-    </Grid>
+    <div className="grid place-items-center w-[450px] md:w-[680px] lg:w-[800px] bg-green-200 p-10 m-6">
+      <img className="mb-5" src={basicPath + poster_path} alt="영화 포스터" />
+      <h3 className="text-base font-bold md:text-lg lg:text-2xl ">{title}</h3>
+      <p>{vote_average.toFixed(1)}</p>
+    </div>
   );
 };
