@@ -3,28 +3,16 @@ import { Link } from 'react-router-dom';
 
 export const Header = () => {
   return (
-    <div className="p-5 ">
-      <nav className="flex align-middle justify-evenly">
-        <div className="flex p-3 w-[300px] md:w-[500px] lg:w-[700px] justify-evenly">
-          <Link className="p-5 block border-black border-[1px] font-GmarketMedium" to={'/'}>
-            Home
-          </Link>
-          <Link className="block font-GmarketMedium" to={'/movie'}>
-            Movie
-          </Link>
-          <Link className="block font-GmarketMedium" to={'/menu1'}>
-            Menu1
-          </Link>
-          <Link className="block font-GmarketMedium" to={'/menu2'}>
-            Menu2
-          </Link>
-        </div>
-        <div className="p-5 bg-gray-200">
-          <Link className="block bg-pink-200 font-GmarketMedium" to={'/login'}>
-            Login
-          </Link>
-        </div>
-      </nav>
-    </div>
+    <header className="flex justify-between p-5">
+      <div className="flex justify-around w-[200px] bg-yellow-200">
+        <Link to={'/'}>홈</Link>
+        <Link to={'/movie'}>영화</Link>
+        <Link to={'/my'}>마이페이지</Link>
+      </div>
+      <div className="flex justify-around bg-green-200 w-[150px]">
+        <Link to={'/login'}>로그인</Link>
+        <Link to={'setting'}>설정</Link>
+      </div>
+    </header>
   );
 };
