@@ -7,17 +7,14 @@ export const MoviePage = () => {
 
   const getData = async () => {
     try {
-      const resultData = await axios.get(
-        'https://api.themoviedb.org/3/movie/now_playing?language=ko&page=1&region=KR',
-        {
-          headers: {
-            Authorization:
-              'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxYmUyOGEwNGYxNDA2ODIzNmU3ZjJkOGIxNWI0MDZjNCIsIm5iZiI6MTcyMDI3NDQ4My41Njc4OTYsInN1YiI6IjY2ODc4NGEyZDc4ODA3YjQ5NjkzNjkyNyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.TpkCcILcwEBOi65_vErEqY8_2exzzrW2K5Zg-FY1xbA',
-          },
-        }
-      );
+      const apiData = await axios.get('https://api.themoviedb.org/3/movie/now_playing?language=ko&page=1&region=KR', {
+        headers: {
+          Authorization:
+            'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxYmUyOGEwNGYxNDA2ODIzNmU3ZjJkOGIxNWI0MDZjNCIsIm5iZiI6MTcyMDE1NzYzNS42MzM0MzQsInN1YiI6IjY2ODc4NGEyZDc4ODA3YjQ5NjkzNjkyNyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.39IZBQrzniGQkof9wGK-UfRh8FqxtOFT7x1E7dGmORA',
+        },
+      });
 
-      setData(resultData.data);
+      setData(apiData.data);
       console.log('success');
     } catch {
       console.log('error');
@@ -30,11 +27,9 @@ export const MoviePage = () => {
 
   return (
     <div>
-      {data.results.map((item) => {
-        return (
-          <MovieCard key={item.id} title={item.title} poster_path={item.poster_path} vote_average={item.vote_average} />
-        );
-      })}
+      {data.results.map((item) => (
+        <MovieCard key={item.id} title={item.title} poster_path={item.poster_path} vote_average={item.vote_average} />
+      ))}
     </div>
   );
 };
