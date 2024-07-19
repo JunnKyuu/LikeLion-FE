@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { MovieCard } from '../components/MovieCard';
+import { Carousel } from '@material-tailwind/react';
 
 export const MoviePage = () => {
   const [data, setData] = useState({ results: [] });
@@ -26,10 +27,24 @@ export const MoviePage = () => {
   }, []);
 
   return (
-    <div>
-      {data.results.map((item) => (
-        <MovieCard key={item.id} title={item.title} poster_path={item.poster_path} vote_average={item.vote_average} />
-      ))}
+    <div className="grid place-items-center">
+      <div className="w-[80%]">
+        {/* <Carousel className="rounded-xl">
+        {data.results.map((item) => (
+          <MovieCard key={item.id} title={item.title} poster_path={item.poster_path} vote_average={item.vote_average} />
+        ))}
+      </Carousel> */}
+        <Carousel className="rounded-xl">
+          {data.results.map((item) => (
+            <MovieCard
+              key={item.id}
+              title={item.title}
+              poster_path={item.poster_path}
+              vote_average={item.vote_average}
+            />
+          ))}
+        </Carousel>
+      </div>
     </div>
   );
 };
